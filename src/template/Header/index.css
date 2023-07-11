@@ -1,0 +1,31 @@
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu img {
+    height: 60px;
+    width: auto;
+}
+
+.menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.menu li {
+    display: flex;
+    padding: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.menu a:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1.2);
+}

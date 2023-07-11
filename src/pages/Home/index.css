@@ -1,0 +1,115 @@
+:root{
+    --color-s-01:  rgb(100, 50, 20);
+    --color-so-01:  rgba(100, 50, 20,0.8);
+    --color-s-02:  rgb(150, 50, 20);
+    --color-so-02:  rgba(150, 50, 20,0.8);
+}
+
+.section-01 {
+    background-color: var(--color-s-01);
+    height: 100vh;
+    max-height: 800px;
+}
+.wallpaper-01 {
+    background-image: url(../../img/DnDwallpaper_2560-x-1600.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay-01 {
+    background-image: linear-gradient(90deg,  var(--color-s-01) 1%, var(--color-so-01) 10%, var(--color-so-01) 90%,  var(--color-s-01) 99%);
+}
+.text-01 {
+    padding: 3em 0;
+}
+
+.section-02 {
+    background-color: var(--color-s-02);
+    height: 100vh;
+    max-height: 800px;
+}
+.wallpaper-02 {
+    background-image: url(../../img/DnDwallpaper1_2560-x-1600.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay-02 {
+    background-image: linear-gradient(90deg,  var(--color-s-02) 1%, var(--color-so-02) 10%, var(--color-so-02) 90%,  var(--color-s-02) 99%);
+}
+
+.product-section {
+    width: 90vw;
+    margin: 50px auto;
+    max-width: 1280px;
+}
+
+
+.product-section-center {
+    margin: 0 auto;
+    padding: 30px 0px;
+    width: 80vw;
+    height: 300px;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.product-img {
+    margin-bottom: 1rem;
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.product-img:hover {
+    transform: scale(1.1);
+}
+
+article {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+article.lastSlide {
+    transform: translateX(-90%);
+}
+article.activePrimeSlide {
+    opacity: 1;
+    transform: translateX(-20%);
+}
+article.activeSecondSlide {
+    opacity: 1;
+    transform: translateX(50%);
+}
+article.activeThirdSlide {
+    opacity: 1;
+    transform: translateX(120%);
+}
+article.nextSlide {
+    transform: translateX(190%);
+}
+
+.prev,
+.next {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: 0.5s;
+}
+
+.prev:hover, .next:hover{
+    transform: scale(1.2);
+    color: white;
+}
+
+.product-btn{
+    display: flex;
+    justify-content: center;
+}
